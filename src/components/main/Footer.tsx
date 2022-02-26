@@ -38,12 +38,12 @@ const Text = styled.div`
   margin-bottom: 1.5rem;
 `;
 
-const TextGrayP = styled.p`
+const GrayP = styled.p`
   ${M92}
   color: var(--color-alt-text);
 `;
 
-const AlignT = styled.div`
+const Align = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
@@ -87,9 +87,9 @@ function Footer(): React.ReactElement {
         <Text>
           <h2 style={{ margin: 0 }}>{t("siteName")}</h2>
           {description.map((key, index) => {
-            return <TextGrayP key={index}>{key}</TextGrayP>;
+            return <GrayP key={index}>{key}</GrayP>;
           })}
-          <AlignT>
+          <Align>
             <LanguageSelector />
             <iframe
               src="https://github.com/sponsors/community-network/button"
@@ -98,7 +98,7 @@ function Footer(): React.ReactElement {
               width="116"
               style={{ border: 0, marginTop: "1px", marginLeft: ".5rem" }}
             />
-          </AlignT>
+          </Align>
         </Text>
         <Links>
           <h2 style={{ margin: 0 }}>Links</h2>
