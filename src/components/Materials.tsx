@@ -36,7 +36,7 @@ export const Container = styled.div`
 export const Circle = styled.span`
   ${M100}
   height: 45px;
-  width: 50px;
+  width: 45px;
   margin-right: 0.7rem;
   background-color: var(--color-base);
   border-radius: 50%;
