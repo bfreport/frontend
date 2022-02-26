@@ -101,7 +101,7 @@ function Footer(): React.ReactElement {
           </Align>
         </Text>
         <Links>
-          <h2 style={{ margin: 0 }}>Links</h2>
+          <h2 style={{ margin: 0 }}>{t("footer.link")}</h2>
           {urls.map((key, index) => {
             return (
               <FLink key={index} href={key} name={t(`footer.links.${index}`)} />
