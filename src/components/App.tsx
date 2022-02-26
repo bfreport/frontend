@@ -16,7 +16,7 @@ class App extends React.Component<Record<string, unknown>, undefined> {
       <BrowserRouter>
         <QueryClientProvider client={queryClient}>
           <Navbar />
-          {/* <Views /> */}
+          <Views />
           <Footer />
         </QueryClientProvider>
       </BrowserRouter>
