@@ -1,0 +1,20 @@
+{
+    "siteName": "BF Report",
+    "siteDescription": "Community Network aims to provide public tools for different games. Starting with Battlefield, we are bringing back online concurrent player stats, as well as personal stats and much more in future.",
+    "loading": "Loading...",
+    "404": "404",
+    "notApplicable": "N/A",
+    "resultNotFound": "No results found",
+    "reports": {
+        "main": "Reports"
+    },
+    "communitites": {
+        "main": "Communities"
+    },
+    "account": {
+        "login": "Login"
+    },
+    "error": {
+        "profile": "Api err."
+    }
+}

@@ -1,17 +1,25 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { BrowserRouter } from "react-router-dom";
+import Footer from "./main/Footer";
+import Navbar from "./main/Navbar";
+import Views from "./Views";
 
-const reactLogo = require("./../assets/img/react_logo.svg");
 import "./../assets/scss/App.scss";
+
+const queryClient = new QueryClient();
 
 class App extends React.Component<Record<string, unknown>, undefined> {
   public render() {
     return (
-      <div className="app">
-        <h1>Hello World!</h1>
-        <p>Foo to the barz</p>
-        <img src={reactLogo.default} height="480" />
-      </div>
+      <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <Navbar />
+          {/* <Views /> */}
+          <Footer />
+        </QueryClientProvider>
+      </BrowserRouter>
     );
   }
 }

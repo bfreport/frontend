@@ -1,12 +1,101 @@
-$bg-color: yellow;
-$border-color: red;
+$blackM88: #161616;
+$blackM91: #212121;
+$blackM96: #2B2B2B;
+$blackM100: #363636;
 
-.app {
-  font-family: helvetica, arial, sans-serif;
-  padding: 2em;
-  border: 5px solid $border-color;
+:root {
+  --color-text: rgba(255, 255, 255, 1);
+  --root-text-color: #ffffff;
+  --color-alt-text: rgba(255, 255, 255, 0.8);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $blackM88;
+
+  %font-shared {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    // font-weight: bold;
+    font-style: normal;
+    // line-height: 150%;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  header {
+    @extend %font-shared;
+  }
+
+  h1 {
+    color: var(--color-text);
+    font-weight: 800;
+    line-height: 150%;
+    font-size: 18px;
+    @extend %font-shared;
+  }
+
+  h2 {
+    color: var(--color-text);
+    font-weight: 600;
+    line-height: 150%;
+    font-size: 16px;
+    @extend %font-shared;
+  }
+
+  h3 {
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    margin: 0;
+    @extend %font-shared;
+  }
+
+  h4 {
+    color: var(--color-text);
+    font-weight: 700;
+    line-height: 150%;
+    font-size: 12px;
+    @extend %font-shared;
+  }
+
+  h5 {
+    color: var(--color-texbbt);
+    font-weight: 700;
+    line-height: 150%;
+    font-size: 12px;
+    @extend %font-shared;
+  }
+
+  h6 {
+    color: var(--color-text);
+    font-weight: 500;
+    line-height: 150%;
+    font-size: 12px;
+    @extend %font-shared;
+  }
+
+  p, a {
+    color: var(--color-text);
+    font-weight: 500;
+    line-height: 150%;
+    font-size: 12px;
+    @extend %font-shared;
+  }
+
+  a:hover {
+    color: var(--root-text-color);  
+  }
 
   p {
-    background-color: $bg-color;
+    color: var(--color-alt-text);
   }
+
+  a {
+    transition: color 0.1s;
+    text-decoration: none;
+  }
+
 }
