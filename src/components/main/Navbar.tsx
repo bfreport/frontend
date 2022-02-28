@@ -290,10 +290,19 @@ function Navbar(): React.ReactElement {
         ) : (
           <SLink to="/">{t("siteName")}</SLink>
         )}
-        {width < maxWidth ? (
-          <></>
-        ) : (
+      </Header>
+      {width < maxWidth ? (
+        <Burger open={open} setOpen={setOpen} />
+      ) : (
+        <>
           <LinkWrapper>
+            <HLink
+              to="/report"
+              title={t("report.main")}
+              activeClassName="opened-link"
+            >
+              {t("report.main")}
+            </HLink>
             <HLink
               to="/reports"
               title={t("reports.main")}
@@ -309,12 +318,8 @@ function Navbar(): React.ReactElement {
               {t("communitites.main")}
             </HLink>
           </LinkWrapper>
-        )}
-      </Header>
-      {width < maxWidth ? (
-        <Burger open={open} setOpen={setOpen} />
-      ) : (
-        <UserAcc />
+          <UserAcc />
+        </>
       )}
     </Nav>
   );

@@ -1,11 +1,13 @@
-import React from "react";
+import * as React from "react";
+import { useTranslation } from "react-i18next";
 import { Container } from "../Materials";
 
 function PageNotFound(): React.ReactElement {
+  const { t } = useTranslation();
   return (
     <Container>
-      <h1>Page not found</h1>
-      <p>We cant find the page your looking for.</p>
+      <h1>{t("pageNotFound.main")}</h1>
+      <p>{t("pageNotFound.description")}</p>
       {/* <PrimaryButtonLink style={{ width: "125px" }} href="/">
         Back to the main page
       </PrimaryButtonLink> */}

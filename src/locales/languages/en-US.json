@@ -2,9 +2,11 @@
     "siteName": "BF Report",
     "siteDescription": "Community Network aims to provide public tools for different games. Starting with Battlefield, we are bringing back online concurrent player stats, as well as personal stats and much more in future.",
     "loading": "Loading...",
-    "404": "404",
     "notApplicable": "N/A",
     "resultNotFound": "No results found",
+    "report": {
+        "main": "Report player"
+    },
     "reports": {
         "main": "Reports"
     },
@@ -31,5 +33,9 @@
             "3": "BF Report Discord",
             "4": "Privacy Policy"
         }
+    },
+    "pageNotFound": {
+        "main": "Page not found",
+        "description": "We cant find the page your looking for."
     }
 }

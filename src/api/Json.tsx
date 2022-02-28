@@ -1,7 +1,7 @@
 import "regenerator-runtime/runtime";
 
 // eslint-disable-next-line prefer-const
-export let MODE = "prod";
+export let MODE = "dev";
 
 export default class JsonClient {
   private endPoints: { dev: string; prod: string; gametoolsdev: string };
