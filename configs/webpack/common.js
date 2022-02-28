@@ -1,6 +1,7 @@
 // shared config (dev and prod)
 const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   resolve: {
@@ -31,7 +32,12 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "index.html.ejs" })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: "index.html.ejs" }),
+    new webpack.DefinePlugin({
+      "process.env.MODE": JSON.stringify(process.env.MODE),
+    }),
+  ],
   externals: {
     react: "React",
     "react-dom": "ReactDOM",
