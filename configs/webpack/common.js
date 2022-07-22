@@ -1,7 +1,7 @@
 // shared config (dev and prod)
+const webpack = require("webpack");
 const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
 
 module.exports = {
   resolve: {
@@ -24,16 +24,19 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          "file-loader?hash=sha512&digest=hex&name=img/[contenthash].[ext]",
-          "image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false",
-        ],
+        test: /\.(png|jpe?g|svg)$/,
+        loader: "file-loader",
+        options: {
+          name: "assets/[name].[ext]",
+        },
       },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "index.html.ejs" }),
+    new HtmlWebpackPlugin({
+      template: "index.html.ejs",
+      inject: false,
+    }),
     new webpack.DefinePlugin({
       "process.env.MODE": JSON.stringify(process.env.MODE),
     }),

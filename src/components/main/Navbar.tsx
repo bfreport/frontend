@@ -299,21 +299,27 @@ function Navbar(): React.ReactElement {
             <HLink
               to="/report"
               title={t("report.main")}
-              activeClassName="opened-link"
+              className={({ isActive }) =>
+                isActive ? "opened-link" : undefined
+              }
             >
               {t("report.main")}
             </HLink>
             <HLink
               to="/reports"
               title={t("reports.main")}
-              activeClassName="opened-link"
+              className={({ isActive }) =>
+                isActive ? "opened-link" : undefined
+              }
             >
               {t("reports.main")}
             </HLink>
             <HLink
               to="/communities"
               title={t("communitites.main")}
-              activeClassName="opened-link"
+              className={({ isActive }) =>
+                isActive ? "opened-link" : undefined
+              }
             >
               {t("communitites.main")}
             </HLink>
